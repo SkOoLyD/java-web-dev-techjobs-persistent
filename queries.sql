@@ -12,3 +12,9 @@ SELECT name FROM employer WHERE location = "St.Louis City"
 DROP TABLE job_skills;
 
 ## Part 4: Test it with SQL
+
+SELECT jobs_id, name, description
+FROM skill
+LEFT JOIN job_skills ON skills.id = job_skills.skills_id
+WHERE job_skills.jobs_id !="null"
+ORDER BY name;
